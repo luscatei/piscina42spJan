@@ -1,0 +1,71 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   rush01.c                                           :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: lfirmino <lfirmino@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/01/18 21:19:27 by lfirmino          #+#    #+#             */
+/*   Updated: 2026/01/18 21:23:55 by lfirmino         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include <unistd.h>
+
+extern	void	ft_putchar(char c);
+
+void	characteres01(int x, int y, int p, int l)
+{
+	if ((p == 1 && l == 1) || (p == x && l == y))
+	{
+		write (1, "/", 1);
+	}	
+	else if ((p == 1 && l == y) || (p == x && l == 1))
+	{
+		write(1, "\\", 1);
+	}
+	else if (((p > 1 && p < x) && l == 1) || ((p > 1 && p < x) && l == y))
+	{
+		write(1, "*", 1);
+	}
+	else if (((p > 1 && p < x) && l != 1) || ((p > 1 && p < x) && l != y))
+	{
+		write(1, " ", 1);
+	}
+	else if ((p == 1 && l != 1) || (p == 1 && l != y))
+	{
+		write(1, "*", 1);
+	}
+	else if ((p == x && l != 1) || (p == x && l != y))
+	{
+		write(1, "*", 1);
+	}
+}
+
+int	rush(int x, int y)
+{
+	int	p;
+	int	l;
+
+	p = 1;
+	l = 1;
+	if (x <= 0 || y <= 0 || x > 211 || y > 211)
+	{
+		return (0);
+	}
+	else
+	{
+		while (p <= x && l <= y)
+		{
+			while (p <= x)
+			{
+				characteres01(x, y, p, l);
+				p++;
+			}
+			ft_putchar('\n');
+			p = 1;
+		l++;
+		}
+		return (0);
+	}
+}
