@@ -30,7 +30,7 @@ Aqui vou deixar registradas minas ideias, meus códigos e comentários referente
 Toda execução em C começa obrigatóriamente pela função 'main'. Ela é o ponto de ebtrada do seu programa.
 * **Retorno:** O mais comum é um 'int'. O valor '0' sinaliza ao SO que o programa terminou com sucesso.
 * **Protótipo:**
-'''c
+```c
 int main(void)
 {
 	// Seu código aqui
