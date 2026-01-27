@@ -53,19 +53,8 @@ Um programa que não recebe nada e nem mostra nada, não se comunica com o mundo
 * Os dados vêm do `STDIN` (standard Input ou Entrada Padrão).
 * Na Piscina a gente foca muito mais na saida e exibição de resultados do que na Entrada, os testes automáticos avaliam a saida no terminal.
 
+### 1.3 Por que no C00 focamos no `putchar` e `write`?
+A 42 exige entendimento do baixo nível.
+* O `printf`é como um robô que ja faz tudo: ele formata números, textos, datas. É "mágica".
+* O `write`e o `putchar` são ferramentas manuais. Eles tem ensinam que para mostrar o número `42`, você precisa mostrar os caracteres de `4` e de `2`. Isso cria controle e autonomia sobre a memoria e o processamento.
 
-
-Este comando é essencial para entender a manipulação de apensa um caractere por vez na saida padrão(`stdout`).
-* **Uso:** `putchar('A');` imprime a letra A.
-* Fundamental para entender como `strings`são formadas (cadeias de caracteres terminadas em `\0`).
-
-
-## 3. Controle de Fluxo (Tomada de Decisões)
-* Condicionais(`if`/`else`): Avalia se uma declaração é verdadeira ou falsa.
-```c
-if (n > 0)
-	write(1, "+", 1);
-else
-	write(1, "-", 1);```
-
-## 4. Manipulação de caracteres e impressões simples
