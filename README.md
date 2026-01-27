@@ -36,7 +36,7 @@ int main(void)
 {
 	// Seu código aqui
 	return (0);
-}
+}```
 
 
 ## 2. Saída de Dados: `putchar`
@@ -51,4 +51,4 @@ Este comando é essencial para entender a manipulação de apensa um caractere p
 if (n > 0)
 	write(1, "+", 1);
 else
-	write(1, "-", 1);
+	write(1, "-", 1);``
