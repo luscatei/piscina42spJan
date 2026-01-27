@@ -24,7 +24,7 @@ Aqui vou deixar registradas minas ideias, meus códigos e comentários referente
 # 💻 C00 - Conceitos fundamentais da linguagem C:
 
 
-## 1. Função `main` Entrada e saida básica.
+### 1. Função `main` Entrada e saida básica.
 Toda execução em C começa obrigatóriamente pela função `main`. Ela é o ponto de entrada do seu programa, você pode ter centenas de funções, mas o compilador sempre vai ignorar todas e buscar o `main`. Ela é a porta de entrada. Se ela não existir, o compilador vai te dar um erro dizendo que não sabe por onde começar.
 * `int`: É o tipo de retorno. Indica que, quando o programa compilar ele dece retornar um número interio para o SO.
 * `main`: É o nome reservado. Não pode ser "inicio", "começar" ou "principal". Tem que ser `main`.
@@ -41,7 +41,7 @@ int main(void)
 ```
 
 
-### 1.2 Entrada e Saida (I/O - Imput/Output).
+#### 1.2 Entrada e Saida (I/O - Imput/Output).
 Um programa que não recebe nada e nem mostra nada, não se comunica com o mundo exterior. I/O é como o programa se comunica com o usuário.
 - Saida (`output`)
 É o ato de mandar dados do programa para a tela (terminal).
@@ -53,8 +53,9 @@ Um programa que não recebe nada e nem mostra nada, não se comunica com o mundo
 * Os dados vêm do `STDIN` (standard Input ou Entrada Padrão).
 * Na Piscina a gente foca muito mais na saida e exibição de resultados do que na Entrada, os testes automáticos avaliam a saida no terminal.
 
-### 1.3 Por que no C00 focamos no `putchar` e `write`?
+#### 1.3 Por que no C00 focamos no `putchar` e `write`?
 A 42 exige entendimento do baixo nível.
 * O `printf`é como um robô que ja faz tudo: ele formata números, textos, datas. É "mágica".
 * O `write`e o `putchar` são ferramentas manuais. Eles tem ensinam que para mostrar o número `42`, você precisa mostrar os caracteres de `4` e de `2`. Isso cria controle e autonomia sobre a memoria e o processamento.
 
+### 2. O `putchar`.
