@@ -3,7 +3,7 @@
 Esta é a minha tentatica de passar na Piscina da 41!!  
 Aqui vou deixar registradas minas ideias, meus códigos e comentários referentes ao meu processo.
 
-> **Nota:** Os arquivos identificados com 'c_.c' são arquivos que fiz após ter enviado a quantidade mínima exigida pelo curso (exercícios extras ou revisões).
+> **Nota:** Os arquivos identificados com `c_.c` são arquivos que fiz após ter enviado a quantidade mínima exigida pelo curso (exercícios extras ou revisões).
 
 
 ---
@@ -26,6 +26,7 @@ Aqui vou deixar registradas minas ideias, meus códigos e comentários referente
 # 💻 C00
 **Conceitos fundamentais da linguagem C:**
 
+
 ### 1. Função 'main' e Entrada/Saída
 Toda execução em C começa obrigatóriamente pela função 'main'. Ela é o ponto de ebtrada do seu programa.
 * **Retorno:** O mais comum é um 'int'. O valor '0' sinaliza ao SO que o programa terminou com sucesso.
@@ -36,3 +37,18 @@ int main(void)
 	// Seu código aqui
 	return (0);
 }
+
+
+## 2. Saída de Dados: `putchar`
+Este comando é essencial para entender a manipulação de apensa um caractere por vez na saida padrão(`stdout`).
+* **Uso:** `putchar('A');` imprime a letra A.
+* **Fundamental para entender como `strings`são formadas (cadeias de caracteres terminadas em `\0`).
+
+
+## 3. Controle de Fluxo (Tomada de Decisões)
+* **Condicionais(`if`/`else`): Avalia se uma declaração é verdadeira ou falsa.
+```c
+if (n > 0)
+	write(1, "+", 1);
+else
+	write(1, "-", 1);
