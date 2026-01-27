@@ -24,9 +24,9 @@ Aqui vou deixar registradas minas ideias, meus códigos e comentários referente
 # 💻 C00 - Conceitos fundamentais da linguagem C:
 
 
-## 1. Função `main` e Entrada/Saída
+## 1. Função `main` Entrada e saida básica.
 Toda execução em C começa obrigatóriamente pela função `main`. Ela é o ponto de entrada do seu programa, você pode ter centenas de funções, mas o compilador sempre vai ignorar todas e buscar o `main`. Ela é a porta de entrada. Se ela não existir, o compilador vai te dar um erro dizendo que não sabe por onde começar.
-* `int`: É o tipo de retorno. Indica que, quando o programa compilar ele dece retornar um número interio para o SO,.
+* `int`: É o tipo de retorno. Indica que, quando o programa compilar ele dece retornar um número interio para o SO.
 * `main`: É o nome reservado. Não pode ser "inicio", "começar" ou "principal". Tem que ser `main`.
 * `(void)`: Significa que, para começar a executar, não precisa de argumento inicial.
 * `return (0)`: É o sinal de "missão cumprida". O número `0` é o código universal de "SUCESSO!". Qualquer outro número indica um erro especifico.  
@@ -41,7 +41,20 @@ int main(void)
 ```
 
 
-## 2. Saída de Dados: `putchar`
+### 1.2 Entrada e Saida (I/O - Imput/Output).
+Um programa que não recebe nada e nem mostra nada, não se comunica com o mundo exterior. I/O é como o programa se comunica com o usuário.
+- Saida (`output`)
+É o ato de mandar dados do programa para a tela (terminal).
+* No C00, usamos funções como `write` ou o `putchar`.
+* Conceito: Você "empurra" bits para um lugar chamado `STDOUT`(Standard Output ou Saída Padrão).  
+
+- Entrada (`input`)
+É quando o programa espera que você de informações para poder executar.
+* Os dados vêm do `STDIN` (standard Input ou Entrada Padrão).
+* Na Piscina a gente foca muito mais na saida e exibição de resultados do que na Entrada, os testes automáticos avaliam a saida no terminal.
+
+
+
 Este comando é essencial para entender a manipulação de apensa um caractere por vez na saida padrão(`stdout`).
 * **Uso:** `putchar('A');` imprime a letra A.
 * Fundamental para entender como `strings`são formadas (cadeias de caracteres terminadas em `\0`).
@@ -55,4 +68,4 @@ if (n > 0)
 else
 	write(1, "-", 1);```
 
-## 4. 
+## 4. Manipulação de caracteres e impressões simples
