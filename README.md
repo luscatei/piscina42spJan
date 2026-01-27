@@ -36,7 +36,8 @@ int main(void)
 {
 	// Seu código aqui
 	return (0);
-}```
+}
+```
 
 
 ## 2. Saída de Dados: `putchar`
