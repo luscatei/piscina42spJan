@@ -76,7 +76,7 @@ mostrar o número `42`, você precisa mostrar os caracteres de `4` e de `2`. Iss
 O ft_putchar é como um carimbador. E não consegue carimbar uma frase inteira de uma vez; ele somente carimba um caractere por vez.
 * `ft_putchar` é uma função criada durante o processo da piscina utilizando os conceitos mais básicos desenvolvidos na 42.
 
-* **Protótipo**
+* **Protótipo:**
 
 C
 ```
@@ -96,13 +96,15 @@ void	ft_putchar(char c)
 A estrutura da função que acabamos de criar é bastante simples:
 
 * **Protótipo**
+
 C
 ```
 	ft_putchar('L'); // Note que usamos aspa símples!
 ```
 
-* Aspas Simples (`' '`): Em C, usamos aspas somples para um único caractere
-(`char`). Se você usar aspas duplas (`" "`), o C vai achar que é uma string
+* Aspas Simples (`' '`): 
+Em C, usamos aspas somples para um único caractere(`char`). 
+Se você usar aspas duplas (`" "`), o C vai achar que é uma string 
 e o `putchar` vai gerar uma mensagem de erro.
 
 #### 2.3 Exemplo de Função Simples.
@@ -121,4 +123,4 @@ int	main(void)
 	ft_putchar('L');
 	return (0);
 }
-``
+```
