@@ -38,10 +38,12 @@ a executar, não precisa de argumento inicial.
 Qualquer outro número indica um erro especifico.
 
 * **Protótipo:** 
+
 ```c int main(void) {
 	// Seu código aqui
 	return (0);
-}```
+}
+```
 
 
 #### 1.2 Entrada e Saida (I/O - Imput/Output).
