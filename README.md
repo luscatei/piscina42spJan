@@ -37,19 +37,19 @@ a executar, não precisa de argumento inicial.
 * `return (0)`: É o sinal de "missão cumprida". O número `0` é o código universal de "SUCESSO!". 
 Qualquer outro número indica um erro especifico.
 
-* **Protótipo:** ```c int main(void) {
+* **Protótipo:** 
+```c int main(void) {
 	// Seu código aqui
 	return (0);
-}
-```
+}```
 
 
 #### 1.2 Entrada e Saida (I/O - Imput/Output).
 Um programa que não recebe nada e nem mostra nada, não se comunica com o 
 mundo exterior. I/O é como o programa se comunica com o usuário. - Saida 
-(`output`) É o ato de mandar dados do programa para a tela (terminal). * 
-No C00, usamos funções como `write` ou o `putchar`. * Conceito: Você 
-"empurra" bits para um lugar chamado `STDOUT`(Standard Output ou Saída 
+(`output`) É o ato de mandar dados do programa para a tela (terminal). 
+* No C00, usamos funções como `write` ou o `putchar`. 
+* Conceito: Você "empurra" bits para um lugar chamado `STDOUT`(Standard Output ou Saída 
 Padrão).
 
 - Entrada (`input`) É quando o programa espera que você de informações 
@@ -60,10 +60,9 @@ a saida no terminal.
 
 #### 1.3 Por que no C00 focamos no `putchar` e `write`?
 A 42 exige entendimento do baixo nível. * O `printf`é como um robô que 
-ja faz tudo: ele formata números, textos, datas. É "mágica". * O 
-`write`e o `putchar` são ferramentas manuais. Eles tem ensinam que para 
-mostrar o número `42`, você precisa mostrar os caracteres de `4` e de 
-`2`. Isso cria controle e autonomia sobre a memoria e o processamento.
+ja faz tudo: ele formata números, textos, datas. É "mágica". 
+* O `write`e o `putchar` são ferramentas manuais. Eles tem ensinam que para 
+mostrar o número `42`, você precisa mostrar os caracteres de `4` e de `2`. Isso cria controle e autonomia sobre a memoria e o processamento.
 
 ### 2. O `putchar`.
 O putchawr é como um carimbador
