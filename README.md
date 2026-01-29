@@ -26,16 +26,15 @@ Scripts básicos para automação.
 
 
 ### 1. Função `main` Entrada e saida básica.
-Toda execução em C começa obrigatóriamente pela função `main`. Ela é o 
-ponto de entrada do seu programa, você pode ter centenas de funções, mas 
-o compilador sempre vai ignorar todas e buscar o `main`. Ela é a porta 
-de entrada. Se ela não existir, o compilador vai te dar um erro dizendo 
-que não sabe por onde começar. * `int`: É o tipo de retorno. Indica que, 
-quando o programa compilar ele dece retornar um número interio para o 
-SO. * `main`: É o nome reservado. Não pode ser "inicio", "começar" ou 
-"principal". Tem que ser `main`. * `(void)`: Significa que, para começar 
-a executar, não precisa de argumento inicial. * `return (0)`: É o sinal 
-de "missão cumprida". O número `0` é o código universal de "SUCESSO!". 
+Toda execução em C começa obrigatóriamente pela função `main`. Ela é o ponto de entrada do seu programa, você 
+pode ter centenas de funções, mas o compilador sempre vai ignorar todas e buscar o `main`.
+Se ela não existir, o compilador vai te dar um erro dizendo que não sabe por onde começar. 
+* `int`: É o tipo de retorno. Indica que, quando o programa compilar ele dece retornar um número interio para o SO. 
+* `main`: É o nome reservado. Não pode ser "inicio", "começar" ou 
+"principal". Tem que ser `main`. 
+* `(void)`: Significa que, para começar 
+a executar, não precisa de argumento inicial. 
+* `return (0)`: É o sinal de "missão cumprida". O número `0` é o código universal de "SUCESSO!". 
 Qualquer outro número indica um erro especifico.
 
 * **Protótipo:** ```c int main(void) {
