@@ -39,7 +39,8 @@ Qualquer outro número indica um erro especifico.
 
 * **Protótipo:** 
 
-```c int main(void) {
+```
+c int main(void) {
 	// Seu código aqui
 	return (0);
 }
@@ -55,7 +56,8 @@ mundo exterior. I/O é como o programa se comunica com o usuário. - Saida
 Padrão).
 
 - Entrada (`input`) É quando o programa espera que você de informações 
-para poder executar. * Os dados vêm do `STDIN` (standard Input ou 
+para poder executar. 
+* Os dados vêm do `STDIN` (standard Input ou 
 Entrada Padrão). * Na Piscina a gente foca muito mais na saida e 
 exibição de resultados do que na Entrada, os testes automáticos avaliam 
 a saida no terminal.
