@@ -1,25 +1,25 @@
 # 🏊 Piscina 42 - Diário de Bordo
 
-Esta é a minha tentativa de passar na Piscina da 42!!  Aqui vou deixar 
-registradas minhas ideias, meus códigos e comentários referentes ao meu 
-processo.
+Esta é a minha tentativa de passar na Piscina da 42!!  
+Aqui vou deixar registradas minhas ideias, meus códigos e comentários referentes ao meu processo.
 
 > **Nota:** Os arquivos identificados com `c_.c` são arquivos que fiz 
 > após ter enviado a quantidade mínima exigida pelo curso (exercícios 
 > extras ou revisões).
 
-
 ---
 
 ## 🐚 Shell00 - Conceitos principais:
-1. Uso básico do Shell Scripting. 2. Execução de comandos de Shell. 3. 
-Manipulação simples de arquivos e diretórios. 4. Scripts básicos para 
-automação.
+1. Uso básico do Shell Scripting. 
+2. Execução de comandos de Shell. 
+3. Manipulação simples de arquivos e diretórios. 
+4. Scripts básicos para automação.
 
 ## 🐚 Shell01 - Conceitos principais:
-1. Scripts mais elaborados com argumentos. 2. Uso de loops e 
-condicionais do Shell. 3. Manipulação de arquivos e processos. 4. 
-Scripts básicos para automação.
+1. Scripts mais elaborados com argumentos. 
+2. Uso de loops e condicionais do Shell. 
+3. Manipulação de arquivos e processos. 
+4. Scripts básicos para automação.
 
 
 # 💻 C00 - Conceitos fundamentais da linguagem C:
@@ -39,8 +39,11 @@ Qualquer outro número indica um erro especifico.
 
 * **Protótipo:** 
 
+C
+
 ```
-c int main(void) {
+int main(void) 
+{
 	// Seu código aqui
 	return (0);
 }
@@ -49,8 +52,8 @@ c int main(void) {
 
 #### 1.2 Entrada e Saida (I/O - Imput/Output).
 Um programa que não recebe nada e nem mostra nada, não se comunica com o 
-mundo exterior. I/O é como o programa se comunica com o usuário. - Saida 
-(`output`) É o ato de mandar dados do programa para a tela (terminal). 
+mundo exterior. I/O é como o programa se comunica com o usuário. 
+- Saida (`output`) É o ato de mandar dados do programa para a tela (terminal). 
 * No C00, usamos funções como `write` ou o `putchar`. 
 * Conceito: Você "empurra" bits para um lugar chamado `STDOUT`(Standard Output ou Saída 
 Padrão).
@@ -63,10 +66,59 @@ exibição de resultados do que na Entrada, os testes automáticos avaliam
 a saida no terminal.
 
 #### 1.3 Por que no C00 focamos no `putchar` e `write`?
-A 42 exige entendimento do baixo nível. * O `printf`é como um robô que 
+A 42 exige entendimento do baixo nível. 
+* O `printf`é como um robô que 
 ja faz tudo: ele formata números, textos, datas. É "mágica". 
 * O `write`e o `putchar` são ferramentas manuais. Eles tem ensinam que para 
 mostrar o número `42`, você precisa mostrar os caracteres de `4` e de `2`. Isso cria controle e autonomia sobre a memoria e o processamento.
 
-### 2. O `putchar`.
-O putchawr é como um carimbador
+### 2. O `ft_putchar`.
+O ft_putchar é como um carimbador. E não consegue carimbar uma frase inteira de uma vez; ele somente carimba um caractere por vez.
+* `ft_putchar` é uma função criada durante o processo da piscina utilizando os conceitos mais básicos desenvolvidos na 42.
+
+* **Protótipo**
+
+C
+```
+#include <unistd.h>
+
+void	ft_putchar(char c)
+{
+	// O '&' pega o endereço da variável 'c'
+	write(1, &c, 1);
+}
+```
+#### 2.2 Sintaxe e Uso.
+
+* Por que usar o `&`?
+* ** O 
+
+A estrutura da função que acabamos de criar é bastante simples:
+
+* **Protótipo**
+C
+```
+	ft_putchar('L'); // Note que usamos aspa símples!
+```
+
+* Aspas Simples (`' '`): Em C, usamos aspas somples para um único caractere
+(`char`). Se você usar aspas duplas (`" "`), o C vai achar que é uma string
+e o `putchar` vai gerar uma mensagem de erro.
+
+#### 2.3 Exemplo de Função Simples.
+
+C
+```
+#include <unistd.h>
+
+void	ft_putchar(char c)
+{
+	write(1, &c, 1);
+}
+
+int	main(void)
+{
+	ft_putchar('L');
+	return (0);
+}
+``
