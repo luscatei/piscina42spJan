@@ -9,7 +9,8 @@
 ## 📁 Estrutura do Repositório
 
 ```
-piscina-42/
+.
+├── piscina-42/
 ├── shell00/
 ├── shell01/
 ├── C00/
@@ -191,21 +192,4 @@ write(1, &c, 1);   // ✅ Correto
 
 ---
 
-## 🔄 Fluxo de Trabalho Recomendado
-
-1. **Entenda** o exercício
-2. **Planeje** no papel
-3. **Escreva** o código
-4. **Teste** com vários casos
-5. **Verifique** a norminette
-6. **Documente** suas descobertas aqui
-
----
-
-*Próximos passos: Usar `ft_putchar()` em loops para criar funções mais complexas como `ft_print_alphabet()`!*
-
----
-
-**📌 Nota:** Este diário é um documento vivo. Voltarei para atualizá-lo com novas descobertas e insights durante minha jornada na Piscina 42.
-
-**🚀 Boa jornada para mim (e para você, se estiver lendo isso)!**
+**🚀 Boa jornada para mim (A jornada se encerrou e agora começa a fase de documentar os aprendizados)!**
