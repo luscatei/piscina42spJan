@@ -1,0 +1,1 @@
+Este documemnto contém uma coleção de exercícios introdutórios da 42, focados em manipulação básica de strings, loops, while, condicional if e a função write.
