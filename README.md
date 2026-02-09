@@ -3,9 +3,7 @@
 Esta é a minha tentativa de passar na Piscina da 42!!  
 Aqui vou deixar registradas minhas ideias, meus códigos e comentários referentes ao meu processo.
 
-> **Nota:** Os arquivos identificados com `c_.c` são arquivos que fiz 
-> após ter enviado a quantidade mínima exigida pelo curso (exercícios 
-> extras ou revisões).
+> **Nota:** Os arquivos identificados com `c_.c` são arquivos que fiz após ter enviado a quantidade mínima exigida pelo curso (exercícios extras ou revisões).
 
 ---
 
@@ -26,16 +24,19 @@ Aqui vou deixar registradas minhas ideias, meus códigos e comentários referent
 
 
 ### 1. Função `main` Entrada e saida básica.
-Toda execução em C começa obrigatóriamente pela função `main`. Ela é o ponto de entrada do seu programa, você 
-pode ter centenas de funções, mas o compilador sempre vai ignorar todas e buscar o `main`.
-Se ela não existir, o compilador vai te dar um erro dizendo que não sabe por onde começar. 
-* `int`: É o tipo de retorno. Indica que, quando o programa compilar ele dece retornar um número interio para o SO. 
-* `main`: É o nome reservado. Não pode ser "inicio", "começar" ou 
-"principal". Tem que ser `main`. 
-* `(void)`: Significa que, para começar 
-a executar, não precisa de argumento inicial. 
-* `return (0)`: É o sinal de "missão cumprida". O número `0` é o código universal de "SUCESSO!". 
-Qualquer outro número indica um erro especifico.
+Toda execução em C começa obrigatóriamente pela função `main`. Ela é o ponto 
+de entrada do seu programa, você pode ter centenas de funções, mas o 
+compilador sempre vai ignorar todas e buscar o `main`.
+Se ela não existir, o compilador vai te dar um erro dizendo que não sabe por 
+onde começar. 
+* `int`: É o tipo de retorno. Indica que, quando o programa compilar ele deve 
+retornar um número inteiro para o SO `sistema operacional`. 
+* `main`: É o nome reservado. Não pode ser "inicio", "começar" ou "principal". 
+Tem que ser `main`. 
+* `(void)`: Significa que, para começar a executar, não precisa de argumento 
+inicial. 
+* `return (0)`: É o sinal de "missão cumprida". O número `0` é o código 
+universal de "SUCESSO!". Qualquer outro número indica um erro especifico.
 
 * **Protótipo:** 
 
@@ -55,26 +56,28 @@ Um programa que não recebe nada e nem mostra nada, não se comunica com o
 mundo exterior. I/O é como o programa se comunica com o usuário. 
 - Saida (`output`) É o ato de mandar dados do programa para a tela (terminal). 
 * No C00, usamos funções como `write` ou o `putchar`. 
-* Conceito: Você "empurra" bits para um lugar chamado `STDOUT`(Standard Output ou Saída 
-Padrão).
+* Conceito: Você "empurra" bits para um lugar chamado `STDOUT`(Standard 
+Output ou Saída Padrão).
 
 - Entrada (`input`) É quando o programa espera que você de informações 
 para poder executar. 
-* Os dados vêm do `STDIN` (standard Input ou 
-Entrada Padrão). * Na Piscina a gente foca muito mais na saida e 
-exibição de resultados do que na Entrada, os testes automáticos avaliam 
-a saida no terminal.
+* Os dados vêm do `STDIN` (standard Input ou Entrada Padrão). 
+* Na Piscina a gente foca muito mais na saida e exibição de resultados do 
+que na Entrada, os testes automáticos avaliam a saida no terminal.
 
 #### 1.3 Por que no C00 focamos no `putchar` e `write`?
 A 42 exige entendimento do baixo nível. 
 * O `printf`é como um robô que 
 ja faz tudo: ele formata números, textos, datas. É "mágica". 
 * O `write`e o `putchar` são ferramentas manuais. Eles tem ensinam que para 
-mostrar o número `42`, você precisa mostrar os caracteres de `4` e de `2`. Isso cria controle e autonomia sobre a memoria e o processamento.
+mostrar o número `42`, você precisa mostrar os caracteres de `4` e de `2`. 
+Isso cria controle e autonomia sobre a memoria e o processamento.
 
 ### 2. O `ft_putchar`.
-O ft_putchar é como um carimbador. E não consegue carimbar uma frase inteira de uma vez; ele somente carimba um caractere por vez.
-* `ft_putchar` é uma função criada durante o processo da piscina utilizando os conceitos mais básicos desenvolvidos na 42.
+O ft_putchar é como um carimbador. E não consegue carimbar uma frase inteira 
+de uma vez; ele somente carimba um caractere por vez.
+* `ft_putchar` é uma função criada durante o processo da piscina utilizando 
+os conceitos mais básicos desenvolvidos na 42.
 
 * **Protótipo:**
 
@@ -91,7 +94,8 @@ void	ft_putchar(char c)
 #### 2.2 Sintaxe e Uso.
 
 * Por que usar o `&`?
-* ** O 
+* ** O `write` é uma função de sistema bruta. E funciona assim: 
+`write(onde, endereço_do_espaço, quantos_bytes);`
 
 A estrutura da função que acabamos de criar é bastante simples:
 
@@ -99,7 +103,7 @@ A estrutura da função que acabamos de criar é bastante simples:
 
 C
 ```
-	ft_putchar('L'); // Note que usamos aspa símples!
+	ft_putchar('L'); // Note que usamos aspas símples!
 ```
 
 * Aspas Simples (`' '`): 
