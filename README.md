@@ -94,7 +94,18 @@ void	ft_putchar(char c)
 #### 2.2 Sintaxe e Uso.
 
 * Por que usar o `&`?
-* ** O `write` é uma função de sistema bruta. E funciona assim: 
+***No C, o simbolo `&` é o operador de endereço.***
+```
+Imagine que você tem uma variável:
+
+char c;
+c = 'A';
+
+* A variavel (c): É a casa física. Ela contém o valor de 'A'.
+* O endereço (&c): É o endereço do espaço na memória referente a essa variável.
+* Se o `write` precisa imprimir um caractere, ele precisa que você de o endereço correspondente.
+```
+* O `write` é uma função de sistema bruta. E funciona assim: 
 `write(onde, endereço_do_espaço, quantos_bytes);`
 
 A estrutura da função que acabamos de criar é bastante simples:
