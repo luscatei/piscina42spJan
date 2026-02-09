@@ -1,141 +1,211 @@
 # 🏊 Piscina 42 - Diário de Bordo
 
-Esta é a minha tentativa de passar na Piscina da 42!!  
-Aqui vou deixar registradas minhas ideias, meus códigos e comentários referentes ao meu processo.
+*Minha jornada para passar na Piscina da 42! Aqui registro ideias, códigos e reflexões sobre meu processo de aprendizado.*
 
-> **Nota:** Os arquivos identificados com `c_.c` são arquivos que fiz após ter enviado a quantidade mínima exigida pelo curso (exercícios extras ou revisões).
+> **Nota:** Arquivos identificados com `c_.c` são exercícios extras ou revisões feitos após entregar a quantidade mínima exigida.
 
 ---
 
-## 🐚 Shell00 - Conceitos principais:
-1. Uso básico do Shell Scripting. 
-2. Execução de comandos de Shell. 
-3. Manipulação simples de arquivos e diretórios. 
-4. Scripts básicos para automação.
-
-## 🐚 Shell01 - Conceitos principais:
-1. Scripts mais elaborados com argumentos. 
-2. Uso de loops e condicionais do Shell. 
-3. Manipulação de arquivos e processos. 
-4. Scripts básicos para automação.
-
-
-# 💻 C00 - Conceitos fundamentais da linguagem C:
-
-
-### 1. Função `main` Entrada e saida básica.
-Toda execução em C começa obrigatóriamente pela função `main`. Ela é o ponto 
-de entrada do seu programa, você pode ter centenas de funções, mas o 
-compilador sempre vai ignorar todas e buscar o `main`.
-Se ela não existir, o compilador vai te dar um erro dizendo que não sabe por 
-onde começar. 
-* `int`: É o tipo de retorno. Indica que, quando o programa compilar ele deve 
-retornar um número inteiro para o SO `sistema operacional`. 
-* `main`: É o nome reservado. Não pode ser "inicio", "começar" ou "principal". 
-Tem que ser `main`. 
-* `(void)`: Significa que, para começar a executar, não precisa de argumento 
-inicial. 
-* `return (0)`: É o sinal de "missão cumprida". O número `0` é o código 
-universal de "SUCESSO!". Qualquer outro número indica um erro especifico.
-
-* **Protótipo:** 
-
-C
+## 📁 Estrutura do Repositório
 
 ```
-int main(void) 
+piscina-42/
+├── shell00/
+├── shell01/
+├── C00/
+│   ├── ex00/     # ft_putchar
+│   ├── ex01/     # ft_print_alphabet
+│   └── ...
+├── C01/
+└── extras/       # Arquivos c_*.c
+```
+
+## 🐚 Shell00 - Fundamentos do Terminal
+
+**Conceitos principais:**
+- Comandos básicos do Unix/Linux (`ls`, `cd`, `mkdir`, `rm`)
+- Manipulação de arquivos e diretórios
+- Permissões (`chmod`)
+- Primeiros scripts de automação
+
+**Dica:** Aprenda bem a diferença entre `>` (sobrescrever) e `>>` (acrescentar) para redirecionamento de saída.
+
+## 🐚 Shell01 - Scripting Básico
+
+**Conceitos principais:**
+- Variáveis de shell (`$VAR`, `"$VAR"`, `'$VAR'`)
+- Condicionais (`if`, `test`, `[ ]`)
+- Loops (`for`, `while`)
+- Processamento de argumentos (`$1`, `$#`, `$@`)
+- Scripts com lógica de controle
+
+---
+
+# 💻 C00 - Fundamentos da Linguagem C
+
+## 1. 🏁 A Função `main()`: Ponto de Partida
+
+### O que é?
+Toda execução em C **obrigatoriamente** começa pela função `main()`. É o ponto de entrada do programa - o compilador sempre procura por ela primeiro.
+
+### Estrutura Básica:
+```c
+int main(void)
 {
-	// Seu código aqui
-	return (0);
+    // Seu código aqui
+    return (0);
 }
 ```
 
+### Anatomia da `main()`:
+- **`int`**: Tipo de retorno. Indica que o programa retorna um número inteiro ao sistema operacional.
+- **`main`**: Nome reservado (não pode ser alterado).
+- **`(void)`**: Parâmetros - `void` significa "sem parâmetros".
+- **`return (0)`**: Código de saída. `0` significa "sucesso", qualquer outro valor indica erro.
 
-#### 1.2 Entrada e Saida (I/O - Imput/Output).
-Um programa que não recebe nada e nem mostra nada, não se comunica com o 
-mundo exterior. I/O é como o programa se comunica com o usuário. 
-- Saida (`output`) É o ato de mandar dados do programa para a tela (terminal). 
-* No C00, usamos funções como `write` ou o `putchar`. 
-* Conceito: Você "empurra" bits para um lugar chamado `STDOUT`(Standard 
-Output ou Saída Padrão).
+**Importante:** O sistema operacional interpreta o valor retornado. É por isso que `return (0)` é essencial.
 
-- Entrada (`input`) É quando o programa espera que você de informações 
-para poder executar. 
-* Os dados vêm do `STDIN` (standard Input ou Entrada Padrão). 
-* Na Piscina a gente foca muito mais na saida e exibição de resultados do 
-que na Entrada, os testes automáticos avaliam a saida no terminal.
+## 2. 🔄 Entrada e Saída (I/O)
 
-#### 1.3 Por que no C00 focamos no `putchar` e `write`?
-A 42 exige entendimento do baixo nível. 
-* O `printf`é como um robô que 
-ja faz tudo: ele formata números, textos, datas. É "mágica". 
-* O `write`e o `putchar` são ferramentas manuais. Eles tem ensinam que para 
-mostrar o número `42`, você precisa mostrar os caracteres de `4` e de `2`. 
-Isso cria controle e autonomia sobre a memoria e o processamento.
+### Por que I/O é fundamental?
+Um programa sem comunicação com o mundo exterior é inútil. I/O permite que seu programa:
+- Receba dados (entrada)
+- Mostre resultados (saída)
 
-### 2. O `ft_putchar`.
-O ft_putchar é como um carimbador. E não consegue carimbar uma frase inteira 
-de uma vez; ele somente carimba um caractere por vez.
-* `ft_putchar` é uma função criada durante o processo da piscina utilizando 
-os conceitos mais básicos desenvolvidos na 42.
+### Na Piscina 42:
+- **Foco inicial**: Saída (`output`)
+- **Por quê?** Os testes automáticos avaliam o que seu programa exibe no terminal
+- **Ferramentas básicas**: `write()` e `putchar()` (não `printf()` no início)
 
-* **Protótipo:**
+### STDIN e STDOUT:
+- **`STDOUT` (Standard Output)**: Saída padrão (normalmente o terminal)
+- **`STDIN` (Standard Input)**: Entrada padrão (normalmente o teclado)
 
-C
+## 3. ✍️ `write()` vs `printf()`: Filosofia 42
+
+### `printf()`: A "mágica"
+```c
+printf("Número: %d\n", 42);  // Faz tudo automaticamente
 ```
+- Formata números, texto, datas
+- Conversões automáticas
+- **Problema**: Esconde o que realmente acontece
+
+### `write()`: O controle manual
+```c
+write(1, "42", 2);  // Você controla cada byte
+```
+- Escreve bytes brutos
+- Requer entender representação de caracteres
+- **Vantagem**: Ensina o que acontece nos bastidores
+
+**Filosofia 42:** Primeiro domine as ferramentas básicas, depois use as avançadas.
+
+## 4. 🖨️ `ft_putchar()`: Nosso Primeiro Bloco de Construção
+
+### O que faz?
+Imprime **um único caractere** por vez. Pense nele como um carimbo que só carimba uma letra de cada vez.
+
+### Implementação:
+```c
 #include <unistd.h>
 
-void	ft_putchar(char c)
+void ft_putchar(char c)
 {
-	// O '&' pega o endereço da variável 'c'
-	write(1, &c, 1);
+    write(1, &c, 1);
 }
 ```
-#### 2.2 Sintaxe e Uso.
 
-* Por que usar o `&`?
-***No C, o simbolo `&` é o operador de endereço.***
+### Por que `&c`?
+- **`&`**: Operador "endereço de"
+- **`c`**: O valor (ex: `'A'`)
+- **`&c`**: O endereço na memória onde `'A'` está armazenado
+
+O `write()` precisa do **endereço** porque trabalha diretamente com a memória.
+
+### Sintaxe do `write()`:
+```c
+write(onde, endereço_dos_dados, quantos_bytes);
 ```
-Imagine que você tem uma variável:
+- **1**: Descritor de arquivo para STDOUT
+- **`&c`**: Endereço do caractere
+- **1**: Apenas 1 byte (tamanho de um `char`)
 
-char c;
-c = 'A';
-
-* A variavel (c): É a casa física. Ela contém o valor de 'A'.
-* O endereço (&c): É o endereço do espaço na memória referente a essa variável.
-* Se o `write` precisa imprimir um caractere, ele precisa que você de o endereço correspondente.
-```
-* O `write` é uma função de sistema bruta. E funciona assim: 
-`write(onde, endereço_do_espaço, quantos_bytes);`
-
-A estrutura da função que acabamos de criar é bastante simples:
-
-* **Protótipo**
-
-C
-```
-	ft_putchar('L'); // Note que usamos aspas símples!
+### Uso Correto:
+```c
+ft_putchar('A');   // ✅ Correto - aspas simples para char
+ft_putchar("A");   // ❌ Errado - aspas duplas criam string
 ```
 
-* Aspas Simples (`' '`): 
-Em C, usamos aspas somples para um único caractere(`char`). 
-Se você usar aspas duplas (`" "`), o C vai achar que é uma string 
-e o `putchar` vai gerar uma mensagem de erro.
-
-#### 2.3 Exemplo de Função Simples.
-
-C
-```
+### Exemplo Completo:
+```c
 #include <unistd.h>
 
-void	ft_putchar(char c)
+void ft_putchar(char c)
 {
-	write(1, &c, 1);
+    write(1, &c, 1);
 }
 
-int	main(void)
+int main(void)
 {
-	ft_putchar('L');
-	return (0);
+    ft_putchar('L');
+    ft_putchar('E');
+    ft_putchar('A');
+    ft_putchar('R');
+    ft_putchar('N');
+    return (0);
 }
 ```
+**Saída:** `LEARN`
+
+---
+
+## 🎯 Dicas Práticas para C00
+
+### 1. Teste Localmente:
+```bash
+gcc -Wall -Wextra -Werror arquivo.c -o programa
+./programa
+```
+
+### 2. Verifique Norminette:
+```bash
+norminette *.c
+```
+
+### 3. Caracteres vs Strings:
+- **Char**: `'A'` (aspas simples, 1 byte)
+- **String**: `"ABC"` (aspas duplas, array de chars terminado com `\0`)
+
+### 4. Erro Comum:
+```c
+write(1, c, 1);    // ❌ Falta o &
+write(1, &c, 1);   // ✅ Correto
+```
+
+### 5. Lembre-se:
+- Todo programa C começa com `main()`
+- Termina com `return (0)`
+- `ft_putchar()` é sua ferramenta básica para exibir qualquer coisa
+- Pratique convertendo números em caracteres (isso será útil em exercícios futuros)
+
+---
+
+## 🔄 Fluxo de Trabalho Recomendado
+
+1. **Entenda** o exercício
+2. **Planeje** no papel
+3. **Escreva** o código
+4. **Teste** com vários casos
+5. **Verifique** a norminette
+6. **Documente** suas descobertas aqui
+
+---
+
+*Próximos passos: Usar `ft_putchar()` em loops para criar funções mais complexas como `ft_print_alphabet()`!*
+
+---
+
+**📌 Nota:** Este diário é um documento vivo. Voltarei para atualizá-lo com novas descobertas e insights durante minha jornada na Piscina 42.
+
+**🚀 Boa jornada para mim (e para você, se estiver lendo isso)!**
