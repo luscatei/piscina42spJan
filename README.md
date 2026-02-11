@@ -1,6 +1,7 @@
 # 🏊 Piscina 42 - Diário de Bordo
 
-*Minha jornada para passar na Piscina da 42! Aqui registro ideias, códigos e reflexões sobre meu processo de aprendizado.*
+*Minha jornada para passar na Piscina da 42! 
+Aqui registro ideias, códigos e reflexões sobre meu processo de aprendizado.*
 
 ---
 
@@ -73,7 +74,8 @@ Um programa sem comunicação com o mundo exterior é inútil. I/O permite que s
 - Mostre resultados (saída)
 
 ### Na Piscina 42:
-- **Foco inicial**: Saída (`output`)
+- **Foco inicial**: 
+Saída (`output`)
 - **Por quê?** Os testes automáticos avaliam o que seu programa exibe no terminal
 - **Ferramentas básicas**: `write()` e `putchar()` (não `printf()` no início)
 
