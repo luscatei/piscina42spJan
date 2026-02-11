@@ -6,22 +6,27 @@
 /*   By: lucas <lucas@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/24 12:34:27 by lucas             #+#    #+#             */
-/*   Updated: 2026/01/26 20:04:43 by lucas            ###   ########.fr       */
+/*   Updated: 2026/02/10 17:36:50 by lucas            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdio.h>
 #include <unistd.h>
 
 /*
-A grande ideia desse programa é fazer uma lógica para printar um conjunto especifico de caracteres de modo que nenhum deles se repita.
+	Crie uma função que exiba todas as combinações únicas de três dígitos 
+	distintos, com os dígitos dentro de cada combinação e as próprias 
+	combinações em ordem crescente.
+
+	A função deve ser prototipada da seguinte forma:
+
+	* void	ft_print_comb(void);
 */
 
 void    ft_print_comb(void)
 {
-	int	c; // centena
-	int	d; // dezena
-	int	u; // unidade
+	int	c;
+	int	d;
+	int	u;
 
 	c = '0';
 	while (c <= '7')
@@ -29,7 +34,7 @@ void    ft_print_comb(void)
 		d = c + 1;
 		while (d <= '8')
 		{
-			u = d +1 ;
+			u = d + 1;
 			while (u <= '9')
 			{		
 				write(1, &c, 1);
@@ -45,7 +50,7 @@ void    ft_print_comb(void)
 	}
 }
 
-int main(void)
-{
-	ft_print_comb();
-}
+//int main(void)
+//{
+//	ft_print_comb();
+//}

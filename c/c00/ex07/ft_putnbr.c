@@ -1,40 +1,53 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_alphabet.c                                :+:      :+:    :+:   */
+/*   ft_putnbr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lucas <lucas@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2026/01/18 22:23:31 by lfirmino          #+#    #+#             */
-/*   Updated: 2026/02/10 00:34:11 by lucas            ###   ########.fr       */
+/*   Created: 2026/02/10 13:27:16 by lucas             #+#    #+#             */
+/*   Updated: 2026/02/10 17:44:58 by lucas            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 /*
-	Crie uma função que exiba o algabeto em minúsculas, em uma única linha, em ordem descendente, começando pela letra 'z'.
+	Crie uma função que exiba o número passado como parâmetro. A função deve
+	ser capaz de ebibir todos os valores possíveis de uma variável do tipo int.
 
 	A função deve ser prototipada da seguinte forma:
 
-	* void	ft_print_reverser_alphabet(void)
+	* void	ft_putnbr(int nb);
 */
 
 #include <unistd.h>
 
-void	ft_print_alphabet(void)
+void	ft_putnbr(int nb)
 {
-	char i;
+	char	c;
 	
-	i = 'a';
-
-	while (i <= 'z')
+	if (nb == -2147483648)
 	{
-		write(1, &i, 1);
-		i++;
+		write(1, "-2147483648", 11);
+		return;
+	}
+	if (nb < 0)
+	{
+		write(1, "-", 1);
+		nb = -nb;
+	}
+	if (nb > 9)
+	{
+		ft_putnbr(nb / 10);
+		ft_putnbr(nb % 10);
+	}
+	else
+	{
+		c = nb + '0';
+		write(1, &c, 1);
 	}
 }
 
-//int main(void)
+//int	main(void)
 //{
-//ft_print_alphabet();
-//return (0);
+//	ft_putnbr(-2147483648);
 //}
