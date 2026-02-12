@@ -6,7 +6,7 @@
 /*   By: lucas <lucas@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/01/19 00:12:18 by lfirmino          #+#    #+#             */
-/*   Updated: 2026/02/10 15:11:26 by lucas            ###   ########.fr       */
+/*   Updated: 2026/02/12 01:10:21 by lucas            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,11 @@
 
 #include <unistd.h>
 
+void	ft_putchar(char c)
+{
+	write(1, &c, 1);
+}
+
 void	ft_print_reverse_alphabet(void)
 {
 	char	letter;
@@ -28,8 +33,7 @@ void	ft_print_reverse_alphabet(void)
 	letter = 'z';
 	while (letter >= 'a')
 	{
-		write(1, &letter, 1);
-		letter--;
+		ft_putchar(letter); letter--;
 	}
 }
 

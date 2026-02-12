@@ -6,11 +6,16 @@
 /*   By: lucas <lucas@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/02/10 18:34:33 by lucas             #+#    #+#             */
-/*   Updated: 2026/02/10 20:13:17 by lucas            ###   ########.fr       */
+/*   Updated: 2026/02/12 09:43:37 by lucas            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
+
+void	ft_putchar(char c)
+{
+	write(1, &c, 1);
+}
 
 void	ft_print_combn(int n)
 {
@@ -22,18 +27,14 @@ void	ft_print_combn(int n)
 	while (++i < n) c[i] = i + '0';
 	while (1)
 	{
-		write(1, c, n);
-		if (c[0]++ == (57 - n)) break;
-		write(1, ", ", 2);
-		p = n;
-		while (--p >= 0 && c[p] == (57 - (n - 1 - p)));
-		c[p]++;
+		write(1, c, n); if (c[0]++ == (58 - n)) break; write(1, ", ", 2); 
+		p = n; while (--p >= 0 && c[p] == (58 - (n - 1 - p))); c[p]++;
 		while (++p < n) c[p] = c[p - 1] + 1;
 	}
 }
 
 int main(void)
 {
-	ft_print_combn(3);
-	write(1, "\n", 1);
+	ft_print_combn(2);
+	ft_putchar('\n');
 }
