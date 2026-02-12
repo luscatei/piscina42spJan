@@ -1,6 +1,6 @@
 # 🏊 Piscina 42 - Diário de Bordo
 
-*Minha jornada para passar na Piscina da 42! 
+*Minha jornada na Piscina da 42! 
 Aqui registro ideias, códigos e reflexões sobre meu processo de aprendizado.*
 
 ---
@@ -74,34 +74,33 @@ Um programa sem comunicação com o mundo exterior é inútil. I/O permite que s
 - Mostre resultados (saída)
 
 ### Na Piscina 42:
-- **Foco inicial**: 
-Saída (`output`)
-- **Por quê?** Os testes automáticos avaliam o que seu programa exibe no terminal
-- **Ferramentas básicas**: `write()` e `putchar()` (não `printf()` no início)
+- **Foco inicial**: Saída (`output`)
+- **Por quê?** Os testes automáticos avaliam o que seu programa exibe no terminal.
+- **Ferramentas básicas**: `write()` e `putchar()`.
 
 ### STDIN e STDOUT:
-- **`STDOUT` (Standard Output)**: Saída padrão (normalmente o terminal)
-- **`STDIN` (Standard Input)**: Entrada padrão (normalmente o teclado)
+- **`STDIN` (Standard Input)**: Entrada padrão (normalmente o teclado).
+- **`STDOUT` (Standard Output)**: Saída padrão (normalmente o terminal).
 
-## 3. ✍️ `write()` vs `printf()`: Filosofia 42
+## 3. ✍️ `write()` vs `printf()`:
 
-### `printf()`: A "mágica"
+### `printf()`: A "mágica".
 ```c
-printf("Número: %d\n", 42);  // Faz tudo automaticamente
+printf("Número: %d\n", 42);  // Faz tudo automaticamente.
 ```
-- Formata números, texto, datas
-- Conversões automáticas
-- **Problema**: Esconde o que realmente acontece
+- Formata números, texto, datas.
+- Conversões automáticas.
+- **Problema**: Esconde o que realmente acontece.
 
-### `write()`: O controle manual
+### `write()`: O controle manual.
 ```c
-write(1, "42", 2);  // Você controla cada byte
+write(1, "42", 2);  // Você controla cada byte.
 ```
-- Escreve bytes brutos
-- Requer entender representação de caracteres
-- **Vantagem**: Ensina o que acontece nos bastidores
+- Escreve bytes brutos.
+- Requer entender representação de caracteres.
+- **Vantagem**: Ensina o que acontece nos bastidores.
 
-**Filosofia 42:** Primeiro domine as ferramentas básicas, depois use as avançadas.
+Primeiro domine as ferramentas básicas, depois use as avançadas.
 
 ## 4. 🖨️ `ft_putchar()`: Nosso Primeiro Bloco de Construção
 
@@ -184,12 +183,6 @@ norminette *.c
 write(1, c, 1);    // ❌ Falta o &
 write(1, &c, 1);   // ✅ Correto
 ```
-
-### 5. Lembre-se:
-- Todo programa C começa com `main()`
-- Termina com `return (0)`
-- `ft_putchar()` é sua ferramenta básica para exibir qualquer coisa
-- Pratique convertendo números em caracteres (isso será útil em exercícios futuros)
 
 ---
 
